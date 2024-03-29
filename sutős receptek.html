@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=512&id=VIdzRfHEcJ5M&format=png">
+    <title>Receptek világa</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;  
+        }
+
+        header {
+            background-color: #cfe6ff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 10px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none;
+            border-radius: 10px;
+        }
+
+        .tab.active {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .welcome-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 9999;
+        }
+
+        .welcome-popup h2 {
+            margin-top: 0;
+        }
+
+        .welcome-popup button {
+            background-color: #ff8c00; /* Narancssárga gomb */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .welcome-popup button:hover {
+            background-color: #ff4500; 
+        }
+
+        h2 {
+            background-color: #ffcc99; 
+            color: #532c06; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+        ul{
+            font-style: arial ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Receptek</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Deszertek</a>
+                    <div class="dropdown-content">
+                        <a href="#brownie">Brownie</a>
+                        <a href="#kokusz-kocka">Kókusz kocka</a>
+                        <a href="#gofri">Gofri</a>
+                    </div>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Sütnivalók</a>
+                    <div class="dropdown-content">
+                        <a href="#csigakalacs">Csigakalács</a>
+                        <a href="#feher-kenyer">Fehér Kenyér</a>
+                        <a href="#stefania-szelet">Stefánia szelet</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Főznivalók</a>
+                    <div class="dropdown-content">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<!-- Főoldal-->
+    <div style="color: red; font-size: 50px; text-align: center;">
+        <h1>!!!Figyelem!!!</h1>
+    </div>  
+    <div style="color: black; font-size: 35px; font-weight: bold; text-align: center;">
+        <h2>A képek nem tükrözik az ételt ami a recept alapján készül, csak figyelemfelkeltés gyanánt vannak!</h2>
+      </div>
+    <!-- Receptek -->
+
+    <main>
+        <section id="csigakalacs" class="tab">
+            <header>
+                <h1>Csigakalács</h1>
+            </header>
+            <h2>Hozzávalók</h2>
+            <ul>
+                <li>60dkg liszt</li>
+                <li>3tojás sárgája</li>
+                <li>3ek cukor</li>
+                <li>1cs vaníliás cukor</li>
+                <li>pici só</li>
+                <li>reszelt citromhéj</li>
+                <li>10dkg olvasztott vaj</li>
+                <li>2dl langyos tej</li>    
+                <li>3dkg élesztő (belemorzsoljuk)</li>
+            </ul>
+            <h2>Elkészítés:</h2>
+            <ul>
+                <li>Dagasztógépben 10-15 percig, vagy kézzel is össze lehet gyúrni.</li>
+                <li>Akkor jó a dagasztógépben, ha már minden hozzávaló lejött az edényfalról.</li>
+                <li>40 percet kelesztjük.</li>
+                <li>Kiborítjuk egy lisztezett deszkára, ketté vágjuk és kisodorjuk őket vékonyra.</li>
+                <li>Mikor meg van, belefordítjuk egy tortasütő formába, mint egy csigát.</li>
+                <li>A második kinyújtott tészta mehet az előző tetejére.</li>
+                <li>Letakarjuk még 30 percre.</li>
+                <li>Lekenjük a tetejét tojásfehérjével, amit összekevertünk tejjel.</li>
+                <li>175 fokon 30-35 percig sütjük.</li>
+            </ul>
+        </section>
+        
+        <section id="feher-kenyer" class="tab">
+            </div>           
+            <header>
+                <h1>Fehér Kenyér Recept(1,5kg)</h1>
+            </header>
+            &nbsp;<p>
+                <img src="https://www.felegyhazipekseg.com/wp-content/uploads/2022/07/felegyhazipekseg_feher_kenyer.jpg" title="Fehér kenyér" style="width: 543px; height: 352px">&nbsp;</p>    
+            <h2>Hozzávalók:</h2>
+            <ul>
+                <li>90 dkg liszt</li>
+                <li>2 evőkanál só</li>
+                <li>1 evőkanál cukor</li>
+                <li>4 evőkanál olaj</li>
+                <li>40 g élesztő</li>
+                <li>7 dl langyos víz</li>
+            </ul>
+            <h2>Elkészítés:</h2>                
+            <ul>
+                <li>15 percig dagasztjuk.</li>
+                <li>4 perc kelesztés.</li>
+                <li>Kinyújtjuk a tésztát, miután megkelt.</li>
+                <li>Két oldalt behajtjuk.</li>
+                <li>Majd leköritjük, vagy gombócot csinálunk belőle.</li>
+                <li>40 percig kelesztjük újra.</li>
+                <li>Belisztezzük a tetejét és bevagdassuk.</li>
+                <li>200 fokon 30-35 percig sütjük.</li>
+                <li>Vizet mellélocsolhatunk, hogy jobban ropogós legyen.</li>
+            </ul>                
+        </section>
+        
+        <section id="stefania-szelet" class="tab">
+            <header>
+                <h1>Stefánia szelet</h1>
+            </header>
+            &nbsp;<p>
+            <img src="https://www.mindmegette.hu/images/375/Social/lead_Social_klasszikus-stefania-szelet.jpg" title="Stefánia szelet"  style="width: 543px; height: 352px">&nbsp;</p>
+
+            <h2>Hozzávalók:</h2>
+            <ul>
+                <li>90 dkg darálthús</li>
+                <li>2 zsömle</li>
+                <li>2 tojás</li>
+                <li>1 fej vöröshagyma</li>
+                <li>4 gerezd fokhagyma</li>
+                <li>só, bors, pirospaprika, bazsalikom ízlés szerint</li>
+                <li>4 db főtt tojás</li>
+            </ul>
+            <h2>Elkészítés:</h2>
+            <ul>
+                <li>4-5 db tojást megfőzünk.</li>
+                <li>2 db zsemlét beáztatunk vízbe.</li>
+                <li>80-90 dkg darálthúshoz adunk 2 db egész tojást.</li>
+                <li>Hozzáadjuk a zsemléket (a víztől kicsavarjuk).</li>
+                <li>Só- bors ízlés szerint, valamint bazsalikom és egy teáskanál pirospaprikát is adunk hozzá.</li>
+                <li>Egy fej vöröshagymát és 4 gerezd fokhagymát lereszelünk, majd összedolgozzuk a hússal.</li>
+                <li>Egy hosszúkás sütőformát kiolajozunk, aljára tesszük kb a fele húst.</li>
+                <li>Majd a tojásokat egymás mögé helyezzük.</li>
+                <li>Végül betakarjuk a hús másik felével.</li>
+                <li>170-180 fokos sütőben kb 1,5 órán át sütjük.</li>
+                <li>Ha kicsit hűlt, akkor kivesszük a formából.</li>
+            </ul>
+        </section>
+        
+        <section id="gofri" class="tab">
+            <header>
+                <h1>Gofri</h1>
+            </header>
+            &nbsp;<p>
+            <img src="https://www.mindmegette.hu/images/365/Social/lead_Social_legjobb-gofri-recept.jpg" title="Gofri"  style="width: 543px; height: 352px">&nbsp;</p>
+            <h2>Hozzávalók</h2>
+            <ul>
+                <li>25 dkg liszt</li>
+                <li>4 tojás sárgája</li>
+                <li>2 dl tej</li>
+                <li>2 evőkanál cukor</li>
+                <li>1 csomag vaníliás cukor</li>
+                <li>pici só</li>
+                <li>12 dkg olvasztott margarin</li>
+                <li>4 tojásfehérje habbá verve</li>
+            </ul>
+            <h2>Elkészítés</h2>
+            <ul>
+                <li>A tojásfehérjén kívül minden hozzávalót összeöntünk és jól összekeverjük.</li>
+                <li>A fehérjét felverjük kemény habnak.</li>
+                <li>Hozzáöntjük a tésztához és összekeverjük.</li>
+                <li>Utána megsütjük őket, amikor már zöld a lámpa.</li>
+                <li>Ha túl világos, még 1-2 percig süssük.</li>
+            </ul>
+            <h2>Megjegyzés</h2>
+            <ul>
+
+            <li>Ha még jobban ropogósabban, megpirulva akarjuk, akár 10-12 percig is süthetjük.</li>
+            <li>A teljes adagból kb.15db gofri lesz.</li>
+
+            </ul>
+        </section> 
+    </main>
+    <section id="brownie" class="tab">
+        <header>
+            <h1>Brownie</h1>
+        </header>
+        &nbsp;<p>
+        <img src="https://kep.index.hu/1/0/4184/41840/418405/41840576_2037b177211487f5914c0c2a156a57ae_wm.jpg" title="brownie"  style="width: 543px; height: 352px">&nbsp;</p>
+        <h2>Hozzávalók:</h2>
+        <ul>
+            <li>2-3 db banán</li>
+            <li>kb 30 dkg csokoládé</li>
+            <li>pici só</li>
+        </ul>
+
+        <h2> Elkészités:</h2>
+        <ul>
+            <li>A banánokat ledaráljuk.</li>
+            <li>Felolvasztjuk a csokit.</li>
+            <li>Hozzáöntjük a leturmixolt banánt.</li>
+            <li>Jól összekeverjük.</li>
+            <li>Egy pici sót is keverünk hozzá.</li>
+            <li>Egy kifóliázott műanyag edénybe beletesszük (attól függ, milyen formát akarunk a brownie-nak).</li>
+            <li>Lezárjuk és egy, két vagy több órára hűtőbe tesszük.</li>
+            <li>Miután megszilárdult, vágódeszkén fel is szeletelhetjük.</li>
+        </ul>
+    </section>
+<!-- Receptek vége-->
+
+
+
+
+
+
+
+
+<!-- Üdvözlő ablak -->
+<div class="welcome-popup">
+    <h1>Üdvözöljük a receptek világában!</h1>
+    <p>Válasszon recepteket opcionálisan a füleknél</p>
+    <button id="continueButton"><b>Tovább az oldalra</b></button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var welcomePopup = document.querySelector('.welcome-popup');
+        welcomePopup.style.display = 'block';
+
+        var continueButton = document.getElementById('continueButton');
+        continueButton.addEventListener('click', function() {
+            welcomePopup.style.display = 'none';
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(function(tab) {
+                tab.style.display = 'block';
+            });
+        });
+
+        var links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                var targetId = this.getAttribute('href').substr(1);
+                var tabs = document.querySelectorAll('.tab');
+                tabs.forEach(function(tab) {
+                    tab.style.display = 'none';
+                });
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+    });
+</script>
