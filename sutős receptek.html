@@ -168,13 +168,6 @@
             </ul>
         </nav>
     </header>
-<!-- Főoldal-->
-    <div style="color: red; font-size: 50px; text-align: center;">
-        <h1>!!!Figyelem!!!</h1>
-    </div>  
-    <div style="color: black; font-size: 35px; font-weight: bold; text-align: center;">
-        <h2>A képek nem tükrözik az ételt ami a recept alapján készül, csak figyelemfelkeltés gyanánt vannak!</h2>
-      </div>
     <!-- Receptek -->
 
     <main>
@@ -353,10 +346,6 @@
         var continueButton = document.getElementById('continueButton');
         continueButton.addEventListener('click', function() {
             welcomePopup.style.display = 'none';
-            var tabs = document.querySelectorAll('.tab');
-            tabs.forEach(function(tab) {
-                tab.style.display = 'block';
-            });
         });
 
         var links = document.querySelectorAll('.dropdown-content a');
